@@ -6,33 +6,174 @@ body {
     height: 100vh;
     width: 100vw;
 
-    background-color: lightslategray;
-
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: darkgray;
 }
 
-#container {
-
-    height: 20em;
+#container1, #container2 {
     width: 80em;
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
+#container2{
+    height: 20em;
+}
+
+#container2{
+    height: 50em;
+}
+
 .magician {
+    height: 20em;
+    width: 15em;
 
-    height: 10em;
-    width: 10em;
-
-    background-color: pink;
+    border-radius: 1em;
 }
 
 .magician img {
-    height: 10em;
-    width: 10em;
+    height: 15em;
+    width: 15em;
+}
+
+.selected {
+    height: 5em;
+    width: 15em;
+}
+
+#selectplayer1, #selectplayer2, #selectplayer3 {
+    height: 10rem;
+    width: 80rem;
+
+    text-align: center;
+    font-size: 4em;
+    color: rgb(57, 11, 11);
+}
+.start {
+    height: 7rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#fight1, #fight2 {
+    height: 5rem;
+    width: 30rem;
+
+    text-align: center; 
+    font-size: 4em;
+    color: rgb(57, 11, 11);
+
+    border-radius: 1em;
+}
+
+#fight2:hover {
+    scale: 1.2;
+    color: white;
+    background-color: rgb(57, 11, 11);
+    border: .1em double rgb(255, 255, 255);
+}
+
+.elegido {
+    filter: grayscale(100%);
+}
+
+#play1, #play2 {
+    height: 40em;
+    width: 20em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}
+
+#im1, #im2 {
+    height: 35em;
+    width: 20em;
+}
+
+#im1 img, #im2 img {
+    height: 35em;
+    width: 18em;
+}
+
+.button:hover{
+    scale: 1.1em;
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+}
+.attBtn, .spBtn {
+    height: 4rem;
+    width: 9rem;
+
+    border-radius: 1em;
+    background-color: darkgreen;
+    color: white;
+    font-size: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#life1, #life2 {
+    height: 2em;
+    width: 100%;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .2em;    
+}
+
+.restlife1, .restlife2 {
+    height: 1.9em;
+    width: 100%;
+    background-color: red;
+
+}
+
+.message {
+    height: 5rem;
+    width: 70rem;
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(57, 11, 11);
+    font-size: 3em;
+}
+
+.visible {
+    display: block;
+}
+
+.oculto {
+    display: none;
 }

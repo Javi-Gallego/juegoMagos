@@ -8,14 +8,74 @@
     <link href="./css/styles.css" rel="stylesheet">
 </head>
 <body>
+    <section id="pantalla1" class="visible">
+        <div id="selectplayer1" class="visible">Selecciona al jugador 1</div>
+        <div id="selectplayer2" class="oculto">Selecciona al jugador 2</div>
+        <div id="selectplayer3" class="oculto">Jugadores preparados</div>
+        <div id="container1">
+            <div id="p1" class="magician">
+                <img id="m1" src="./img/mago1.png" alt="first"/>
+                <div id="sel11" class="visible selected"></div>
+                <div id="sel21" class="oculto selected">Player 1</div>
+                <div id="sel31" class="oculto selected">Player 2</div>
+            </div>
+            <div id="p2" class="magician">
+                <img id="m2" src="./img/mago2.png" alt="second"/>
+                <div id="sel12" class="visible selected"></div>
+                <div id="sel22" class="oculto selected">Player 1</div>
+                <div id="sel32" class="oculto selected">Player 2</div>
+            </div>
+            <div id="p3" class="magician">
+                <img id="m3" src="./img/mago3.png" alt="third"/>
+                <div id="sel13" class="visible selected"></div>
+                <div id="sel23" class="oculto selected">Player 1</div>
+                <div id="sel33" class="oculto selected">Player 2</div>
+            </div>
+            <div id="p4" class="magician">
+                <img id="m4" src="./img/mago4.png" alt="fourth"/>
+                <div id="sel14" class="visible selected"></div>
+                <div id="sel24" class="oculto selected">Player 1</div>
+                <div id="sel34" class="oculto selected">Player 2</div>
+            </div>
+        </div>
+        <div class="start">
+            <div id="fight1" class="visible"></div>
+            <div id="fight2" class="oculto">¡¡ A luchar !!</div>
+        </div>
+    </section>
 
-    <div id="container">
-        <div class="magician"><img id="m1" src="./img/mago1.jpg" alt="first"/></div>
-        <div class="magician"><img id="m2" src="./img/mago2.jpg" alt="second"/></div>
-        <div class="magician"><img id="m3" src="./img/mago3.jpg" alt="third"/></div>
-        <div class="magician"><img id="m4" src="./img/mago4.jpg" alt="fourth"/></div>
-    </div>
-    
+    <section id="pantalla2" class="oculto">
+        <div id="container2">
+            <div id="play1">
+                <div id="life1">
+                    <div class="restlife1"></div>
+                </div>
+                <div id="im1">
+                    <img id="left1" class="oculto" src="./img/Harryattack1.png" alt="fourth"/>
+                    <img id="left2" class="oculto" src="./img/Hermioneattack1.png" alt="fourth"/>
+                    <img id="left3" class="oculto" src="./img/Malfoyattack1.png" alt="fourth"/>
+                    <img id="left4" class="oculto" src="./img/Snapeattack1.png" alt="fourth"/> 
+                </div>
+                <div id="att1" class="attBtn button">Atacar</div>
+                <div id="sp1" class="spBtn button">Especial</div>
+            </div>
+            <div id="play2">
+                <div id="life2">
+                    <div class="restlife2"></div>
+                </div>
+                <div id="im2">
+                    <img id="right1" class="oculto" src="./img/Harryattack2.png" alt="fourth"/>
+                    <img id="right2" class="oculto" src="./img/Hermioneattack2.png" alt="fourth"/>
+                    <img id="right3" class="oculto" src="./img/Malfoyattack2.png" alt="fourth"/>
+                    <img id="right4" class="oculto" src="./img/Snapeattack2.png" alt="fourth"/>
+                </div>
+                <div id="att2" class="attBtn button">Atacar</div>
+                <div id="sp2" class="spBtn button">Especial</div>
+            </div>
+            <div class="message"></div>
+        </div>
+    </section>
+
     <script src="./js/Magos.js"></script>
     <script src="./js/main.js"></script>
 </body>
