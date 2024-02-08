@@ -91,7 +91,19 @@ const arrayButtons = Array.from(buttons)
 arrayButtons.map(
     elemento => {
         elemento.addEventListener("click", (e) => {
-
+            if (e.target.id === "att1") {
+                mago1.atacar(mago3, 1, 2)
+            }
+            if (e.target.id === "sp1") {
+                mago1.atacar(mago3, 1, 2)
+            }
+            if (e.target.id === "att2") {
+                mago3.atacar(mago1, 2, 1)
+            }
+            if (e.target.id === "sp2") {
+                mago3.atacar(mago1, 2, 1)
+            }
+            
         })
     }
 )

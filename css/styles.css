@@ -94,7 +94,7 @@ body {
 }
 
 #play1, #play2 {
-    height: 40em;
+    height: 43em;
     width: 20em;
 
     display: flex;
@@ -149,11 +149,14 @@ body {
     padding: .2em;    
 }
 
-.restlife1, .restlife2 {
+#restlife1, #restlife2 {
     height: 1.9em;
-    width: 100%;
     background-color: red;
 
+}
+
+.muerto {
+    background-color: rgba(255, 100, 20, 0.5);
 }
 
 .message {
@@ -168,6 +171,45 @@ body {
 
     color: rgb(57, 11, 11);
     font-size: 3em;
+}
+
+.w100 {
+    width: 100%;
+}
+.w90 {
+    width: 90%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w10 {
+    width: 10%;
 }
 
 .visible {
