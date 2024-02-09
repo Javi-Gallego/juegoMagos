@@ -22,13 +22,23 @@ class Mago {
         restlife.classList.remove(`w${barravida1}`)
         restlife.classList.add(`w${barravida2}`)
 
+        const mensaje2 = document.getElementById("message")
+        mensaje2.innerHTML = `<div>Expelliarmus!!</div><audio src="./media/expelliarmus.mp3" autoplay></audio>`
+        
+        setTimeout( () => {
+            const mensaje2 = document.getElementById("message")
+            mensaje2.innerHTML = `<div></div>`
+        }, 5000)
+
         if(oponente.vida <= 0) {
             const muerto = document.getElementById(`play${enemyplayer}`)
             muerto.classList.add("muerto")
+            const mensaje = document.getElementById("message")
+            mensaje.innerHTML = `<div>Player ${ownplayer} wins!!</div>`
         }
     }
     especial(oponente, ownplayer, enemyplayer){
-        if (type === "defensivo") {
+        if (this.type === "defensivo") {
             let barravida1 = Math.floor(this.vida/10)*10
             this.vida = 100
             let barravida2 = Math.floor(this.vida/10)*10
@@ -37,16 +47,39 @@ class Mago {
             restlife.classList.remove(`w${barravida1}`)
             restlife.classList.add(`w${barravida2}`)
 
+            const mensaje = document.getElementById("message")
+            mensaje.innerHTML = `<div>Max Healing!!</div>`
+
+            setTimeout( () => {
+                const mensaje2 = document.getElementById("message")
+                mensaje2.innerHTML = `<div></div>`
+            }, 5000)
+
         }
-        if (type === "ofensivo") {
+        if (this.type === "ofensivo") {
             let vida = oponente.vida
             let barravida1 = Math.floor(oponente.vida/10)*10
-            oponente.vida -= this.damage / (oponente.defense/4) * Math.floor(Math.random() * 10)
+            oponente.vida -= this.damage / (oponente.defense/4) * (Math.floor(Math.random() * 10) + 5)
 
             let barravida2 = Math.floor(oponente.vida/10)*10
             const restlife = document.getElementById(`restlife${enemyplayer}`)
             restlife.classList.remove(`w${barravida1}`)
             restlife.classList.add(`w${barravida2}`)
+
+            const mensaje = document.getElementById("message")
+            mensaje.innerHTML = `<div>Avada Kedavra!!</div><audio src="./media/avadakadavra.mp3" autoplay></audio>`
+
+            setTimeout( () => {
+                const mensaje2 = document.getElementById("message")
+                mensaje2.innerHTML = `<div></div>`
+            }, 5000)
+
+            if(oponente.vida <= 0) {
+                const muerto = document.getElementById(`play${enemyplayer}`)
+                muerto.classList.add("muerto")
+                const mensaje2 = document.getElementById("message")
+                mensaje2.innerHTML = `<div>Player ${ownplayer} wins!!</div>`
+            }
         }
     }
 }
@@ -55,11 +88,13 @@ class Mago {
 let mago1 = new Mago(12, "Harry", "hombre", "Gryffindor", 80, 70, "ofensivo")
 let mago2 = new Mago( 12, "Hermione", "mujer", "Gryffindor", 70, 10, "defensivo")
 let mago3 = new Mago( 26, "Malfoy", "hombre", "Slytherin", 50, 70, "defensivo")
-let mago4 = new Mago( 32, "Severus", "hombre", "Slytherin", 80, 80, "ofensivo")
+let mago4 = new Mago( 32, "Severus", "hombre", "Slytherin", 80, 80, "defensivo")
 
 //Diccionario js
 
 let magos = {
+    "player1" : "",
+    "player2" : "",
     "m1" : mago1,
     "m2" : mago2,
     "m3" : mago3,

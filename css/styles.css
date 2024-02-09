@@ -94,8 +94,8 @@ body {
 }
 
 #play1, #play2 {
-    height: 43em;
-    width: 20em;
+    height: 38em;
+    width: 19em;
 
     display: flex;
     flex-direction: row;
@@ -106,12 +106,12 @@ body {
 }
 
 #im1, #im2 {
-    height: 35em;
-    width: 20em;
+    height: 32em;
+    width: 19em;
 }
 
 #im1 img, #im2 img {
-    height: 35em;
+    height: 32em;
     width: 18em;
 }
 
@@ -122,8 +122,8 @@ body {
     cursor: pointer;
 }
 .attBtn, .spBtn {
-    height: 4rem;
-    width: 9rem;
+    height: 3rem;
+    width: 8rem;
 
     border-radius: 1em;
     background-color: darkgreen;
@@ -156,10 +156,12 @@ body {
 }
 
 .muerto {
-    background-color: rgba(255, 100, 20, 0.5);
+    background-color: rgba(255, 20, 20, 0.5);
+    filter: blur(1px);
+    scale: 0.9;
 }
 
-.message {
+#message {
     height: 5rem;
     width: 70rem;
 
@@ -219,3 +221,4 @@ body {
 .oculto {
     display: none;
 }
+

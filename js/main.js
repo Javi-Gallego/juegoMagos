@@ -12,6 +12,7 @@ arrayAvatares.map(
         elemento.addEventListener("click", (e) => {
             if(!player1){
                 player1 = magos[e.target.id]
+                magos["player1"] = e.target.id
                 e.target.classList.add("elegido");
                 e.currentTarget.style.pointerEvents = "none";
                 const numplayer1 = e.target.id.slice(-1)
@@ -39,6 +40,7 @@ arrayAvatares.map(
             } else {
                 if (player1 !== magos[e.target.id] && !player2) {
                     player2 = magos[e.target.id]
+                    magos["player2"] = e.target.id
                     e.target.classList.add("elegido");
                     e.currentTarget.style.pointerEvents = "none";
                     const numplayer2 = e.target.id.slice(-1)
@@ -92,16 +94,16 @@ arrayButtons.map(
     elemento => {
         elemento.addEventListener("click", (e) => {
             if (e.target.id === "att1") {
-                mago1.atacar(mago3, 1, 2)
+                magos[magos["player1"]].atacar(magos[magos["player2"]], 1, 2)
             }
             if (e.target.id === "sp1") {
-                mago1.atacar(mago3, 1, 2)
+                magos[magos["player1"]].especial(magos[magos["player2"]], 1, 2)
             }
             if (e.target.id === "att2") {
-                mago3.atacar(mago1, 2, 1)
+                magos[magos["player2"]].atacar(magos[magos["player1"]], 2, 1)
             }
             if (e.target.id === "sp2") {
-                mago3.atacar(mago1, 2, 1)
+                magos[magos["player2"]].especial(magos[magos["player1"]], 2, 1)
             }
             
         })
