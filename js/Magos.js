@@ -8,7 +8,8 @@ class Mago {
         this.damage = damage,
         this.defense = defense,
         this.type = type,
-        this.vida = 100
+        this.vida = 100,
+        this.nesp = 3
     }
     //metodos
     atacar(oponente, ownplayer, enemyplayer){
@@ -35,10 +36,22 @@ class Mago {
             muerto.classList.add("muerto")
             const mensaje = document.getElementById("message")
             mensaje.innerHTML = `<div>Player ${ownplayer} wins!!</div>`
+
+            setTimeout( () => {
+                const winner = document.getElementById(`winner1`)
+                winner.classList.remove("oculto")
+                winner.classList.add("visible")
+                const screen2 = document.getElementById("pantalla2")
+                screen2.classList.remove("visible")
+                screen2.classList.add("oculto")
+                const screen3 = document.getElementById("pantalla3")
+                screen3.classList.remove("oculto")
+                screen3.classList.add("visible")
+            }, 4000)
         }
     }
     especial(oponente, ownplayer, enemyplayer){
-        if (this.type === "defensivo") {
+        if (this.type === "defensivo" && this.nesp > 0) {
             let barravida1 = Math.floor(this.vida/10)*10
             this.vida = 100
             let barravida2 = Math.floor(this.vida/10)*10
@@ -56,7 +69,7 @@ class Mago {
             }, 5000)
 
         }
-        if (this.type === "ofensivo") {
+        if (this.type === "ofensivo" && this.nesp > 0) {
             let vida = oponente.vida
             let barravida1 = Math.floor(oponente.vida/10)*10
             oponente.vida -= this.damage / (oponente.defense/4) * (Math.floor(Math.random() * 10) + 5)
@@ -79,8 +92,21 @@ class Mago {
                 muerto.classList.add("muerto")
                 const mensaje2 = document.getElementById("message")
                 mensaje2.innerHTML = `<div>Player ${ownplayer} wins!!</div>`
+
+                setTimeout( () => {
+                    const winner = document.getElementById(`winner1`)
+                    winner.classList.remove("oculto")
+                    winner.classList.add("visible")
+                    const screen2 = document.getElementById("pantalla2")
+                    screen2.classList.remove("visible")
+                    screen2.classList.add("oculto")
+                    const screen3 = document.getElementById("pantalla3")
+                    screen3.classList.remove("oculto")
+                    screen3.classList.add("visible")
+                }, 4000)
             }
         }
+        this.nesp--
     }
 }
 

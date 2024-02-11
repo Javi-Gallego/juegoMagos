@@ -17,26 +17,38 @@
             <div id="p1" class="magician">
                 <img id="m1" src="./img/mago1.png" alt="first"/>
                 <div id="sel11" class="visible selected"></div>
-                <div id="sel21" class="oculto selected">Player 1</div>
-                <div id="sel31" class="oculto selected">Player 2</div>
+                <div id="sel21" class="oculto selected color1">Player 1</div>
+                <div id="sel31" class="oculto selected color2">Player 2</div>
             </div>
             <div id="p2" class="magician">
                 <img id="m2" src="./img/mago2.png" alt="second"/>
                 <div id="sel12" class="visible selected"></div>
-                <div id="sel22" class="oculto selected">Player 1</div>
-                <div id="sel32" class="oculto selected">Player 2</div>
+                <div id="sel22" class="oculto selected color1">Player 1</div>
+                <div id="sel32" class="oculto selected color2">Player 2</div>
             </div>
             <div id="p3" class="magician">
                 <img id="m3" src="./img/mago3.png" alt="third"/>
                 <div id="sel13" class="visible selected"></div>
-                <div id="sel23" class="oculto selected">Player 1</div>
-                <div id="sel33" class="oculto selected">Player 2</div>
+                <div id="sel23" class="oculto selected color1">Player 1</div>
+                <div id="sel33" class="oculto selected color2">Player 2</div>
             </div>
             <div id="p4" class="magician">
                 <img id="m4" src="./img/mago4.png" alt="fourth"/>
                 <div id="sel14" class="visible selected"></div>
-                <div id="sel24" class="oculto selected">Player 1</div>
-                <div id="sel34" class="oculto selected">Player 2</div>
+                <div id="sel24" class="oculto selected color1">Player 1</div>
+                <div id="sel34" class="oculto selected color2">Player 2</div>
+            </div>
+            <div id="p5" class="bloqued">
+                <img id="m5" class="visible" src="./img/occultSel.png" alt="fourth"/>
+                <div id="sel15" class="visible selected"></div>
+                <div id="sel25" class="oculto selected">Player 1</div>
+                <div id="sel35" class="oculto selected">Player 2</div>
+            </div>
+            <div id="p6" class="bloqued">
+                <img id="m6" class="visible" src="./img/occultSel.png" alt="fourth"/>
+                <div id="sel16" class="visible selected"></div>
+                <div id="sel26" class="oculto selected">Player 1</div>
+                <div id="sel36" class="oculto selected">Player 2</div>
             </div>
         </div>
         <div class="start">
@@ -77,6 +89,19 @@
             </div>
         </div>
     </section>
+
+    <div id="pantalla3" class="oculto">
+        <div id="play1" class="">
+
+            <div id="im1">
+                <img id="winner1" class="oculto" src="./img/harrywins.png" alt="fourth"/>
+                <img id="winner2" class="oculto" src="./img/hermionewins.jpg" alt="fourth"/>
+                <img id="winner3" class="oculto" src="./img/malfoywins.png" alt="fourth"/>
+                <img id="winner4" class="oculto" src="./img/snapewins.png" alt="fourth"/> 
+            </div>
+            <div id="restart" class="button">Rejugar</div>
+        </div>
+    </div>
 
     <script src="./js/Magos.js"></script>
     <script src="./js/main.js"></script>

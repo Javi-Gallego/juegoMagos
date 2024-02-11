@@ -21,6 +21,9 @@ arrayAvatares.map(
                 atacante1.classList.remove("oculto")
                 atacante1.classList.add("visible")
 
+                const shadowplayer2 = document.getElementById(`p${numplayer1}`)
+                shadowplayer2.classList.add("styleplayer1")
+
                 const selplayer1 = document.getElementById(`sel1${numplayer1}`)
                 selplayer1.classList.remove("visible")
                 selplayer1.classList.add("oculto")
@@ -48,6 +51,9 @@ arrayAvatares.map(
                     const atacante2 = document.getElementById(`right${numplayer2}`)
                     atacante2.classList.remove("oculto")
                     atacante2.classList.add("visible")
+
+                    const shadowplayer2 = document.getElementById(`p${numplayer2}`)
+                    shadowplayer2.classList.add("styleplayer2")
 
                     const selplayer2 = document.getElementById(`sel1${numplayer2}`)
                     selplayer2.classList.remove("visible")
