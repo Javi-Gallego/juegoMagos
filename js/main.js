@@ -1,7 +1,6 @@
-
 let player1;
-
 let player2;
+let partidasTotales= 0
 
 const avatares = document.getElementsByClassName("magician")
 
@@ -115,3 +114,26 @@ arrayButtons.map(
         })
     }
 )
+
+const restart = document.getElementById("restart")
+
+restart.addEventListener("click", () =>{
+    magos[magos["player1"]].reestablecer()
+    magos[magos["player2"]].reestablecer()
+    const screen3 = document.getElementById("pantalla3")
+    screen3.classList.remove("visible")
+    screen3.classList.add("oculto")
+    const screen1 = document.getElementById("pantalla1")
+    screen1.classList.remove("oculto")
+    screen1.classList.add("visible")
+
+    partidasTotales++
+
+})
+
+/*Listado sonidos*/
+let sounds = []
+
+sounds[0] = ""
+sounds[1] = "./media/expelliarmus.mp3"
+sounds[2] = "./media/avadakadavra.mp3"

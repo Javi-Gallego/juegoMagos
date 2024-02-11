@@ -24,7 +24,10 @@ class Mago {
         restlife.classList.add(`w${barravida2}`)
 
         const mensaje2 = document.getElementById("message")
-        mensaje2.innerHTML = `<div>Expelliarmus!!</div><audio src="./media/expelliarmus.mp3" autoplay></audio>`
+        mensaje2.innerHTML = `<div>Expelliarmus!!</div>`          
+        const sonido = document.getElementById("sound")
+        sonido.src = sounds[1]
+        // mensaje2.innerHTML = `<div>Expelliarmus!!</div><audio src="./media/expelliarmus.mp3" autoplay></audio>`
         
         setTimeout( () => {
             const mensaje2 = document.getElementById("message")
@@ -38,7 +41,10 @@ class Mago {
             mensaje.innerHTML = `<div>Player ${ownplayer} wins!!</div>`
 
             setTimeout( () => {
-                const winner = document.getElementById(`winner1`)
+                let winnerId = `player${ownplayer}`
+                let winPlayer = `${magos[winnerId]}`
+                let winName = magos[`${winPlayer}`]
+                const winner = document.getElementById(`winner${winPlayer.slice(-1)}`)               
                 winner.classList.remove("oculto")
                 winner.classList.add("visible")
                 const screen2 = document.getElementById("pantalla2")
@@ -80,7 +86,10 @@ class Mago {
             restlife.classList.add(`w${barravida2}`)
 
             const mensaje = document.getElementById("message")
-            mensaje.innerHTML = `<div>Avada Kedavra!!</div><audio src="./media/avadakadavra.mp3" autoplay></audio>`
+            mensaje.innerHTML = `<div>Avada Kedavra!!</div>`
+            // mensaje.innerHTML = `<div>Avada Kedavra!!</div><audio src="./media/avadakadavra.mp3" autoplay></audio>`
+            const sonido = document.getElementById("sound")
+            sonido.src = sounds[2]
 
             setTimeout( () => {
                 const mensaje2 = document.getElementById("message")
@@ -94,7 +103,11 @@ class Mago {
                 mensaje2.innerHTML = `<div>Player ${ownplayer} wins!!</div>`
 
                 setTimeout( () => {
-                    const winner = document.getElementById(`winner1`)
+
+                    let winnerId = `player${ownplayer}`
+                    let winPlayer = `${magos[winnerId]}`
+                    let winName = magos[`${winPlayer}`]
+                    const winner = document.getElementById(`winner${winPlayer.slice(-1)}`)
                     winner.classList.remove("oculto")
                     winner.classList.add("visible")
                     const screen2 = document.getElementById("pantalla2")
@@ -108,13 +121,19 @@ class Mago {
         }
         this.nesp--
     }
+    reestablecer() {
+        this.vida = 100
+        this.nesp = 3
+    }
 }
 
 //Instanciaciones
-let mago1 = new Mago(12, "Harry", "hombre", "Gryffindor", 80, 70, "ofensivo")
-let mago2 = new Mago( 12, "Hermione", "mujer", "Gryffindor", 70, 10, "defensivo")
-let mago3 = new Mago( 26, "Malfoy", "hombre", "Slytherin", 50, 70, "defensivo")
-let mago4 = new Mago( 32, "Severus", "hombre", "Slytherin", 80, 80, "defensivo")
+let mago1 = new Mago( 15, "Harry", "hombre", "Gryffindor", 80, 70, "ofensivo")
+let mago2 = new Mago( 15, "Hermione", "mujer", "Gryffindor", 70, 20, "defensivo")
+let mago3 = new Mago( 15, "Malfoy", "hombre", "Slytherin", 50, 70, "ofensivo")
+let mago4 = new Mago( 36, "Severus", "hombre", "Slytherin", 80, 80, "defensivo")
+let mago5 = new Mago( 68, "Dumbledore", "hombre", "Gryffindor", 100, 100, "defensivo")
+let mago6 = new Mago( 50, "Voldemort", "hombre", "Slytherin", 100, 100, "ofensivo")
 
 //Diccionario js
 
@@ -124,5 +143,7 @@ let magos = {
     "m1" : mago1,
     "m2" : mago2,
     "m3" : mago3,
-    "m4" : mago4
+    "m4" : mago4,
+    "m5" : mago5,
+    "m6" : mago6
 }
