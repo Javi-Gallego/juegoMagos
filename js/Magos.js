@@ -128,22 +128,22 @@ class Mago {
 }
 
 //Instanciaciones
-let mago1 = new Mago( 15, "Harry", "hombre", "Gryffindor", 80, 70, "ofensivo")
-let mago2 = new Mago( 15, "Hermione", "mujer", "Gryffindor", 70, 20, "defensivo")
-let mago3 = new Mago( 15, "Malfoy", "hombre", "Slytherin", 50, 70, "ofensivo")
-let mago4 = new Mago( 36, "Severus", "hombre", "Slytherin", 80, 80, "defensivo")
-let mago5 = new Mago( 68, "Dumbledore", "hombre", "Gryffindor", 100, 100, "defensivo")
-let mago6 = new Mago( 50, "Voldemort", "hombre", "Slytherin", 100, 100, "ofensivo")
+// let mago1 = new Mago( 15, "Harry", "hombre", "Gryffindor", 80, 70, "ofensivo")
+// let mago2 = new Mago( 15, "Hermione", "mujer", "Gryffindor", 70, 20, "defensivo")
+// let mago3 = new Mago( 15, "Malfoy", "hombre", "Slytherin", 50, 70, "ofensivo")
+// let mago4 = new Mago( 36, "Severus", "hombre", "Slytherin", 80, 80, "defensivo")
+// let mago5 = new Mago( 68, "Dumbledore", "hombre", "Gryffindor", 100, 100, "defensivo")
+// let mago6 = new Mago( 50, "Voldemort", "hombre", "Slytherin", 100, 100, "ofensivo")
 
-//Diccionario js
+// //Diccionario js
 
-let magos = {
-    "player1" : "",
-    "player2" : "",
-    "m1" : mago1,
-    "m2" : mago2,
-    "m3" : mago3,
-    "m4" : mago4,
-    "m5" : mago5,
-    "m6" : mago6
-}
+// let magos = {
+//     "player1" : "",
+//     "player2" : "",
+//     "m1" : mago1,
+//     "m2" : mago2,
+//     "m3" : mago3,
+//     "m4" : mago4,
+//     "m5" : mago5,
+//     "m6" : mago6
+// }

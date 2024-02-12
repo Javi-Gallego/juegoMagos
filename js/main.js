@@ -120,20 +120,56 @@ const restart = document.getElementById("restart")
 restart.addEventListener("click", () =>{
     magos[magos["player1"]].reestablecer()
     magos[magos["player2"]].reestablecer()
+    
     const screen3 = document.getElementById("pantalla3")
     screen3.classList.remove("visible")
     screen3.classList.add("oculto")
+    
     const screen1 = document.getElementById("pantalla1")
     screen1.classList.remove("oculto")
     screen1.classList.add("visible")
 
+    const borraestilo1 = document.getElementById(`p${magos["player1"].slice(-1)}`)
+    borraestilo1.classList.remove("styleplayer1")
+
+    const selplayer1 = document.getElementById(`sel1${magos["player1"].slice(-1)}`)
+    selplayer1.classList.remove("oculto")
+    selplayer1.classList.add("visible")
+    
+    const selplayer11 = document.getElementById(`sel2${magos["player1"].slice(-1)}`)
+    selplayer11.classList.remove("visible")
+    selplayer11.classList.add("oculto")
+
+    const borraestilo2 = document.getElementById(`p${magos["player2"].slice(-1)}`)
+    borraestilo2.classList.remove("styleplayer2")
+
+    const selplayer2 = document.getElementById(`sel1${magos["player2"].slice(-1)}`)
+    selplayer2.classList.remove("oculto")
+    selplayer2.classList.add("visible")
+
+    const selplayer22 = document.getElementById(`sel3${magos["player2"].slice(-1)}`)
+    selplayer22.classList.remove("visible")
+    selplayer22.classList.add("oculto")
+
+    player1 = null
+    player2 = null
+
     partidasTotales++
 
+    if(partidasTotales >= 1) {
+        const desbloqueo1 = document.getElementById("p5")
+        desbloqueo1.classList.remove("bloqued")
+        desbloqueo1.classList.add("magician")
+        const dumbledore = document.getElementById("m5")
+        dumbledore.src = images[5]
+    }
+
+    if(partidasTotales >= 2) {
+        const desbloqueo2 = document.getElementById("p6")
+        desbloqueo2.classList.remove("bloqued")
+        desbloqueo2.classList.add("magician")
+        const Voldemort = document.getElementById("m6")
+        Voldemort.src = images[6]
+    }
+
 })
-
-/*Listado sonidos*/
-let sounds = []
-
-sounds[0] = ""
-sounds[1] = "./media/expelliarmus.mp3"
-sounds[2] = "./media/avadakadavra.mp3"
