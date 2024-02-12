@@ -7,6 +7,7 @@ body {
     width: 100vw;
 
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -14,7 +15,7 @@ body {
 }
 
 #container1, #container2 {
-    width: 80em;
+    width: 55em;
 
     display: flex;
     flex-direction: row;
@@ -24,24 +25,24 @@ body {
     gap: 2em;
 }
 
-#container2{
-    height: 20em;
+#container1{
+    height: 25em;
 }
 
 #container2{
-    height: 50em;
+    height: 32em;
 }
 
 .magician, .bloqued {
-    height: 20em;
-    width: 15em;
+    height: 12.5em;
+    width: 10em;
 
     border-radius: 1em;
 }
 
 .magician img , .bloqued img{
-    height: 15em;
-    width: 15em;
+    height: 10em;
+    width: 10em;
 }
 
 .magician img:hover, .bloqued img:hover{
@@ -57,20 +58,21 @@ body {
 }
 
 .selected {
-    height: 5em;
-    width: 15em;
+    height: 2.5em;
+    width: 12em;
 }
 
 #selectplayer1, #selectplayer2, #selectplayer3 {
-    height: 10rem;
-    width: 80rem;
+    height: 4rem;
+    width: 60rem;
 
     text-align: center;
-    font-size: 4em;
+    font-size: 2.5em;
+    font-weight: bolder;
     color: rgb(57, 11, 11);
 }
 .start {
-    height: 7rem;
+    height: 4rem;
 
     display: flex;
     flex-direction: row;
@@ -79,12 +81,12 @@ body {
 }
 
 .selected {
-    width: 15rem;
+    width: 12rem;
 
     color: black;
     text-align: center;
     font-weight: bolder;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .color1 {
@@ -96,11 +98,11 @@ body {
 }
 
 #fight1, #fight2 {
-    height: 5rem;
-    width: 30rem;
+    height: 2.6rem;
+    width: 15rem;
 
     text-align: center; 
-    font-size: 4em;
+    font-size: 2em;
     color: rgb(57, 11, 11);
 
     border-radius: 1em;
@@ -118,8 +120,8 @@ body {
 }
 
 #play1, #play2 {
-    height: 38em;
-    width: 19em;
+    height: 27em;
+    width: 17em;
 
     display: flex;
     flex-direction: row;
@@ -130,13 +132,13 @@ body {
 }
 
 #im1, #im2 {
-    height: 32em;
-    width: 19em;
+    height: 22em;
+    width: 15em;
 }
 
 #im1 img, #im2 img {
-    height: 32em;
-    width: 18em;
+    height: 22em;
+    width: 11em;
 }
 
 .button:hover{
@@ -145,14 +147,14 @@ body {
     color: black;
     cursor: pointer;
 }
-.attBtn, .spBtn {
-    height: 3rem;
+.attBtn, .spBtn , .resBtn{
+    height: 1.8rem;
     width: 8rem;
 
     border-radius: 1em;
     background-color: darkgreen;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
 
     display: flex;
     flex-direction: row;
@@ -161,7 +163,7 @@ body {
 }
 
 #life1, #life2 {
-    height: 2em;
+    height: 1.5em;
     width: 100%;
 
     background-color: white;
@@ -170,13 +172,12 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: .2em;    
+    padding: .2em;  
 }
 
 #restlife1, #restlife2 {
-    height: 1.9em;
+    height: 1.3em;
     background-color: red;
-
 }
 
 .muerto {
@@ -186,8 +187,8 @@ body {
 }
 
 #message {
-    height: 5rem;
-    width: 70rem;
+    height: 3rem;
+    width: 60rem;
 
     display: flex;
     flex-direction: row;
@@ -196,7 +197,7 @@ body {
     align-items: center;
 
     color: rgb(57, 11, 11);
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .w100 {

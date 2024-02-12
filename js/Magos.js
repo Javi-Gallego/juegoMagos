@@ -19,6 +19,9 @@ class Mago {
         console.log(vida - oponente.vida)
 
         let barravida2 = Math.floor(oponente.vida/10)*10
+        if (barravida2 < 0) {
+            barravida2 = 0
+        }
         const restlife = document.getElementById(`restlife${enemyplayer}`)
         restlife.classList.remove(`w${barravida1}`)
         restlife.classList.add(`w${barravida2}`)
@@ -27,7 +30,6 @@ class Mago {
         mensaje2.innerHTML = `<div>Expelliarmus!!</div>`          
         const sonido = document.getElementById("sound")
         sonido.src = sounds[1]
-        // mensaje2.innerHTML = `<div>Expelliarmus!!</div><audio src="./media/expelliarmus.mp3" autoplay></audio>`
         
         setTimeout( () => {
             const mensaje2 = document.getElementById("message")
@@ -53,6 +55,7 @@ class Mago {
                 const screen3 = document.getElementById("pantalla3")
                 screen3.classList.remove("oculto")
                 screen3.classList.add("visible")
+                muerto.classList.remove("muerto")
             }, 4000)
         }
     }
@@ -81,13 +84,15 @@ class Mago {
             oponente.vida -= this.damage / (oponente.defense/4) * (Math.floor(Math.random() * 10) + 5)
 
             let barravida2 = Math.floor(oponente.vida/10)*10
+            if (barravida2 < 0) {
+                barravida2 = 0
+            }
             const restlife = document.getElementById(`restlife${enemyplayer}`)
             restlife.classList.remove(`w${barravida1}`)
             restlife.classList.add(`w${barravida2}`)
 
             const mensaje = document.getElementById("message")
             mensaje.innerHTML = `<div>Avada Kedavra!!</div>`
-            // mensaje.innerHTML = `<div>Avada Kedavra!!</div><audio src="./media/avadakadavra.mp3" autoplay></audio>`
             const sonido = document.getElementById("sound")
             sonido.src = sounds[2]
 
@@ -110,12 +115,14 @@ class Mago {
                     const winner = document.getElementById(`winner${winPlayer.slice(-1)}`)
                     winner.classList.remove("oculto")
                     winner.classList.add("visible")
+                    magos.winner = `${winPlayer.slice(-1)}`
                     const screen2 = document.getElementById("pantalla2")
                     screen2.classList.remove("visible")
                     screen2.classList.add("oculto")
                     const screen3 = document.getElementById("pantalla3")
                     screen3.classList.remove("oculto")
                     screen3.classList.add("visible")
+                    muerto.classList.remove("muerto")
                 }, 4000)
             }
         }
@@ -126,24 +133,3 @@ class Mago {
         this.nesp = 3
     }
 }
-
-//Instanciaciones
-// let mago1 = new Mago( 15, "Harry", "hombre", "Gryffindor", 80, 70, "ofensivo")
-// let mago2 = new Mago( 15, "Hermione", "mujer", "Gryffindor", 70, 20, "defensivo")
-// let mago3 = new Mago( 15, "Malfoy", "hombre", "Slytherin", 50, 70, "ofensivo")
-// let mago4 = new Mago( 36, "Severus", "hombre", "Slytherin", 80, 80, "defensivo")
-// let mago5 = new Mago( 68, "Dumbledore", "hombre", "Gryffindor", 100, 100, "defensivo")
-// let mago6 = new Mago( 50, "Voldemort", "hombre", "Slytherin", 100, 100, "ofensivo")
-
-// //Diccionario js
-
-// let magos = {
-//     "player1" : "",
-//     "player2" : "",
-//     "m1" : mago1,
-//     "m2" : mago2,
-//     "m3" : mago3,
-//     "m4" : mago4,
-//     "m5" : mago5,
-//     "m6" : mago6
-// }

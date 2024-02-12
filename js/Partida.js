@@ -33,6 +33,7 @@ images[0] = ""
 let magos = {
     "player1" : "",
     "player2" : "",
+    "winner" : "",
     "m1" : mago1,
     "m2" : mago2,
     "m3" : mago3,
